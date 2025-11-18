@@ -1,0 +1,77 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Modern Scrollbar Styles */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #f1f5f9;
+}
+
+/* Webkit Scrollbar for Chrome, Safari, Edge */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  border-radius: 10px;
+  border: 2px solid #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  transform: scale(1.1);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(135deg, #1e40af, #1e3a8a);
+}
+
+/* Mobile Scrollbar */
+@media (max-width: 768px) {
+  *::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border: 1px solid #f1f5f9;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar for specific elements */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #f8fafc;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  border-radius: 8px;
+  border: 1px solid #f8fafc;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+}
