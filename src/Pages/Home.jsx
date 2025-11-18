@@ -62,10 +62,13 @@ const Home = () => {
                   Services
                   <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-[rgba(37,150,190,1)] transition-all duration-300 group-hover:w-3/4"></span>
                 </a>
-                <a href="#about" className="px-4 py-2 text-gray-600 hover:text-[rgba(37,150,190,1)] hover:bg-[rgba(37,150,190,0.1)] font-medium transition-all duration-200 rounded-xl relative group">
+                <button 
+                  onClick={() => navigate('/about')}
+                  className="px-4 py-2 text-gray-600 hover:text-[rgba(37,150,190,1)] hover:bg-[rgba(37,150,190,0.1)] font-medium transition-all duration-200 rounded-xl relative group"
+                >
                   About
                   <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-[rgba(37,150,190,1)] transition-all duration-300 group-hover:w-3/4"></span>
-                </a>
+                </button>
                 <a href="#contact" className="px-4 py-2 text-gray-600 hover:text-[rgba(37,150,190,1)] hover:bg-[rgba(37,150,190,0.1)] font-medium transition-all duration-200 rounded-xl relative group">
                   Contact
                   <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-[rgba(37,150,190,1)] transition-all duration-300 group-hover:w-3/4"></span>
@@ -184,7 +187,7 @@ const Home = () => {
                       </a>
                       
                       <a 
-                        href="#about" 
+                        onClick={() => navigate('/about')} 
                         className="flex items-center px-4 py-4 text-gray-600 hover:text-[rgba(37,150,190,1)] hover:bg-gradient-to-r hover:from-[rgba(37,150,190,0.1)] hover:to-[rgba(37,150,190,0.2)] font-medium transition-all duration-300 rounded-2xl group backdrop-blur-sm border border-transparent hover:border-[rgba(37,150,190,0.3)]"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >

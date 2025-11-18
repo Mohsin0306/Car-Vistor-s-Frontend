@@ -3,6 +3,7 @@ import Home from './Pages/Home'
 import Payment from './Pages/Payment'
 import Register from './Pages/Register'
 import Login from './Pages/Login'
+import AboutUs from './Pages/AboutUs'
 import UserDashboard from './Dashboards/User/User_dashboard'
 import Notifications from './Pages/Notifications'
 import AdminDashboard from './Dashboards/Admin/Dashboard'
@@ -19,6 +20,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
