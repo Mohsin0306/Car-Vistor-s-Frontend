@@ -133,7 +133,7 @@ const Home = () => {
                     <div className="flex items-center space-x-3">
                       <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-[rgba(37,150,190,0.2)] to-[rgba(37,150,190,0.3)] rounded-xl backdrop-blur-sm border border-white/30">
                         <img 
-                          src="/src/assets/images/logo.png" 
+                          src={logo} 
                           alt="Car Vistors Logo" 
                           className="w-8 h-8 object-contain"
                         />
