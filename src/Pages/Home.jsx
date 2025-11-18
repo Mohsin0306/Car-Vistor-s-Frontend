@@ -630,7 +630,7 @@ const Home = () => {
               <h4 className="text-lg font-semibold mb-4">Company</h4>
               <ul className="space-y-2">
                 <li><button onClick={() => navigate('/about')} className="text-gray-400 hover:text-white transition-colors duration-200">About Us</button></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">Contact</a></li>
+                <li><button onClick={() => navigate('/contact')} className="text-gray-400 hover:text-white transition-colors duration-200">Contact</button></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">Privacy Policy</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">Terms of Service</a></li>
               </ul>
