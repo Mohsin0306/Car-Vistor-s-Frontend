@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import logBgImage from '../assets/images/log-bg.png'
+import logo from '../assets/images/logo.png'
 import { authAPI } from '../Services/APIs'
 
 const Login = () => {
@@ -82,7 +83,7 @@ const Login = () => {
             <div className="flex items-center space-x-2 sm:space-x-4">
               <div className="w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center">
                 <img 
-                  src="/src/assets/images/logo.png" 
+                  src={logo} 
                   alt="Car Vistors Logo" 
                   className="w-full h-full object-contain"
                 />

@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import logo from '../assets/images/logo.png'
+import bgImage from '../assets/images/bg.jpg'
+import bgMobileImage from '../assets/images/bgmobile.png'
 
 const Home = () => {
   const navigate = useNavigate()
@@ -249,13 +252,13 @@ const Home = () => {
         <div className="absolute inset-0">
           {/* Desktop Background */}
           <img 
-            src="/src/assets/images/bg.jpg" 
+            src={bgImage} 
             alt="Background" 
             className="hidden lg:block w-full h-full object-cover"
           />
           {/* Mobile Background */}
           <img 
-            src="/src/assets/images/bgmobile.png" 
+            src={bgMobileImage} 
             alt="Mobile Background" 
             className="block lg:hidden w-full h-full object-cover"
           />

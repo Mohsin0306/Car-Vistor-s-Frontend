@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import regBgImage from '../assets/images/reg-bg.png'
+import logo from '../assets/images/logo.png'
 import { authAPI, requestAPI } from '../Services/APIs'
 
 const Register = () => {
@@ -98,7 +99,7 @@ const Register = () => {
             <div className="flex items-center space-x-2 sm:space-x-4">
               <div className="w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center">
                 <img 
-                  src="/src/assets/images/logo.png" 
+                  src={logo} 
                   alt="Car Vistors Logo" 
                   className="w-full h-full object-contain"
                 />
