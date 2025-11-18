@@ -186,10 +186,12 @@ const Home = () => {
                         <span className="transition-all duration-300 font-semibold">Services</span>
                       </a>
                       
-                      <a 
-                        onClick={() => navigate('/about')} 
-                        className="flex items-center px-4 py-4 text-gray-600 hover:text-[rgba(37,150,190,1)] hover:bg-gradient-to-r hover:from-[rgba(37,150,190,0.1)] hover:to-[rgba(37,150,190,0.2)] font-medium transition-all duration-300 rounded-2xl group backdrop-blur-sm border border-transparent hover:border-[rgba(37,150,190,0.3)]"
-                        onClick={() => setIsMobileMenuOpen(false)}
+                      <button 
+                        onClick={() => {
+                          navigate('/about')
+                          setIsMobileMenuOpen(false)
+                        }}
+                        className="flex items-center px-4 py-4 text-gray-600 hover:text-[rgba(37,150,190,1)] hover:bg-gradient-to-r hover:from-[rgba(37,150,190,0.1)] hover:to-[rgba(37,150,190,0.2)] font-medium transition-all duration-300 rounded-2xl group backdrop-blur-sm border border-transparent hover:border-[rgba(37,150,190,0.3)] w-full text-left"
                       >
                         <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-[rgba(37,150,190,0.1)] to-[rgba(37,150,190,0.2)] rounded-xl mr-4 group-hover:from-[rgba(37,150,190,0.2)] group-hover:to-[rgba(37,150,190,0.3)] transition-all duration-300">
                           <svg className="w-5 h-5 text-gray-500 group-hover:text-[rgba(37,150,190,1)] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -197,7 +199,7 @@ const Home = () => {
                           </svg>
                         </div>
                         <span className="transition-all duration-300 font-semibold">About</span>
-                      </a>
+                      </button>
                       
                       <a 
                         href="#contact" 
@@ -621,7 +623,7 @@ const Home = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Company</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">About Us</a></li>
+                <li><button onClick={() => navigate('/about')} className="text-gray-400 hover:text-white transition-colors duration-200">About Us</button></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">Contact</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">Privacy Policy</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">Terms of Service</a></li>
