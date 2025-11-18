@@ -15,6 +15,7 @@ import AdminRequests from './Pages/AdminRequests'
 import AdminUsers from './Pages/AdminUsers'
 import AdminReports from './Pages/AdminReports'
 import ReportDetail from './Pages/ReportDetail'
+import NotificationDetail from './Pages/NotificationDetail'
 
 function App() {
   return (
@@ -36,6 +37,8 @@ function App() {
         <Route path="/admin/reports" element={<AdminReports />} />
         <Route path="/admin/report/:vin" element={<ReportDetail />} />
         <Route path="/admin/request/:id" element={<VINRequestDetail />} />
+        <Route path="/admin/notifications/:id" element={<NotificationDetail />} />
+        <Route path="/notifications/:id" element={<NotificationDetail />} />
       </Routes>
     </Router>
   )
