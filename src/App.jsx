@@ -4,6 +4,7 @@ import Payment from './Pages/Payment'
 import Register from './Pages/Register'
 import Login from './Pages/Login'
 import AboutUs from './Pages/AboutUs'
+import ContactUs from './Pages/ContactUs'
 import UserDashboard from './Dashboards/User/User_dashboard'
 import Notifications from './Pages/Notifications'
 import AdminDashboard from './Dashboards/Admin/Dashboard'
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/contact" element={<ContactUs />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />

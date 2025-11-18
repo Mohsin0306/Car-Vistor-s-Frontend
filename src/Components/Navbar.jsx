@@ -84,14 +84,8 @@ const Navbar = ({ currentPage = 'home' }) => {
                   <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-[rgba(37,150,190,1)] transition-all duration-300 group-hover:w-3/4"></span>
                 )}
               </button>
-              <a 
-                href="#contact" 
-                onClick={(e) => {
-                  if (currentPage !== 'home') {
-                    e.preventDefault()
-                    navigate('/#contact')
-                  }
-                }}
+              <button 
+                onClick={() => navigate('/contact')}
                 className={`px-4 py-2 ${currentPage === 'contact' ? 'text-[rgba(37,150,190,1)] bg-[rgba(37,150,190,0.1)]' : 'text-gray-600 hover:text-[rgba(37,150,190,1)] hover:bg-[rgba(37,150,190,0.1)]'} font-medium transition-all duration-200 rounded-xl relative group`}
               >
                 Contact
@@ -101,7 +95,7 @@ const Navbar = ({ currentPage = 'home' }) => {
                 {currentPage !== 'contact' && (
                   <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-[rgba(37,150,190,1)] transition-all duration-300 group-hover:w-3/4"></span>
                 )}
-              </a>
+              </button>
             </div>
 
             {/* Desktop CTA Buttons */}
@@ -244,18 +238,12 @@ const Navbar = ({ currentPage = 'home' }) => {
                     <span className="transition-all duration-300 font-semibold">About</span>
                   </button>
                   
-                  <a 
-                    href="#contact" 
-                    onClick={(e) => {
-                      if (currentPage !== 'home') {
-                        e.preventDefault()
-                        navigate('/#contact')
-                        setIsMobileMenuOpen(false)
-                      } else {
-                        setIsMobileMenuOpen(false)
-                      }
+                  <button 
+                    onClick={() => {
+                      navigate('/contact')
+                      setIsMobileMenuOpen(false)
                     }}
-                    className="flex items-center px-4 py-4 text-gray-600 hover:text-[rgba(37,150,190,1)] hover:bg-gradient-to-r hover:from-[rgba(37,150,190,0.1)] hover:to-[rgba(37,150,190,0.2)] font-medium transition-all duration-300 rounded-2xl group backdrop-blur-sm border border-transparent hover:border-[rgba(37,150,190,0.3)]"
+                    className="flex items-center px-4 py-4 text-gray-600 hover:text-[rgba(37,150,190,1)] hover:bg-gradient-to-r hover:from-[rgba(37,150,190,0.1)] hover:to-[rgba(37,150,190,0.2)] font-medium transition-all duration-300 rounded-2xl group backdrop-blur-sm border border-transparent hover:border-[rgba(37,150,190,0.3)] w-full text-left"
                   >
                     <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-[rgba(37,150,190,0.1)] to-[rgba(37,150,190,0.2)] rounded-xl mr-4 group-hover:from-[rgba(37,150,190,0.2)] group-hover:to-[rgba(37,150,190,0.3)] transition-all duration-300">
                       <svg className="w-5 h-5 text-gray-500 group-hover:text-[rgba(37,150,190,1)] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -264,7 +252,7 @@ const Navbar = ({ currentPage = 'home' }) => {
                       </svg>
                     </div>
                     <span className="transition-all duration-300 font-semibold">Contact</span>
-                  </a>
+                  </button>
                       
                   {/* Get Started Button */}
                   <button 
