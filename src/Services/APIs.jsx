@@ -336,8 +336,31 @@ export const notificationAPI = {
       console.error('Create notification error:', error);
       throw error;
     }
-  },
-};
+      },
+    };
+
+    // Contact APIs
+    export const contactAPI = {
+      submit: async (contactData) => {
+        try {
+          const response = await fetch(`${API_BASE_URL}/contact/submit`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(contactData),
+          });
+          const data = await response.json();
+          if (!response.ok) {
+            throw new Error(data.message || 'Contact form submission failed');
+          }
+          return data;
+        } catch (error) {
+          console.error('Contact Submit API error:', error);
+          throw error;
+        }
+      },
+    };
 
 // User APIs (Admin only)
 export const userAPI = {
